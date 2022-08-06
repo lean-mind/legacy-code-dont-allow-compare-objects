@@ -1,10 +1,10 @@
-package com.leanmind.withspringbootandjdbctemplate;
+package com.leanmind.legacyERP;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WithSpringbootAndJdbcTemplateApplicationTests {
+class ErpAppTests {
 
 	@Test
 	void contextLoads() {
