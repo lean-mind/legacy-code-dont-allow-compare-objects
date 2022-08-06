@@ -40,8 +40,8 @@ final class EmployeeRepositoryIT extends DataBaseInMemoryTestSuite {
     }
 
     @Test
-    @DisplayName("Should retrieve a employee by them id")
-    public void should_retrieve_a_employee_by_them_id() {
+    @DisplayName("Should retrieve an employee by them id")
+    public void should_retrieve_an_employee_by_them_id() {
 
         Employee employee = repository.find(2);
 
@@ -51,8 +51,8 @@ final class EmployeeRepositoryIT extends DataBaseInMemoryTestSuite {
     }
 
     @Test
-    @DisplayName("Don't found a employee")
-    public void don_t_found_a_employee() {
+    @DisplayName("Don't found an employee")
+    public void don_t_found_an_employee() {
         assertThrows(EmployeeDontFound.class, () -> {
             repository.find(42);
         });

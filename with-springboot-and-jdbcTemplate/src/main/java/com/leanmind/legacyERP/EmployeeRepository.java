@@ -18,6 +18,10 @@ public class EmployeeRepository {
         return jdbcTemplate.query("SELECT * FROM employees;", getEmployeeRowMapper());
     }
 
+    public Employee find(int id) {
+        return findAll().stream().filter(employee -> employee.getId() == id).findFirst().orElseThrow(() -> new EmployeeDontFound(id));
+    };
+
     private RowMapper<Employee> getEmployeeRowMapper(){
         return (rs, rowNum) -> new Employee(rs.getInt("id"), rs.getString("name"), rs.getString("status"));
     }
