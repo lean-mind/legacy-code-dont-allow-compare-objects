@@ -1,6 +1,7 @@
 package com.leanmind.legacyERP.integration;
 
 import com.leanmind.legacyERP.Employee;
+import com.leanmind.legacyERP.EmployeeDontFound;
 import com.leanmind.legacyERP.EmployeeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 final class EmployeeRepositoryIT extends DataBaseInMemoryTestSuite {
 
@@ -31,6 +33,28 @@ final class EmployeeRepositoryIT extends DataBaseInMemoryTestSuite {
         List<Employee> employees = repository.findAll();
 
         assertThat(employees).isNotEmpty();
-        employees.forEach(employee -> assertThat(employee.getName()).isEqualTo("Pepe"));
+        employees.forEach(employee -> assertThatEmployeeWithId(employee.getId())
+                                                                       .hasStatus("working")
+                                                                       .doAssert()
+        );
+    }
+
+    @Test
+    @DisplayName("Should retrieve a employee by them id")
+    public void should_retrieve_a_employee_by_them_id() {
+
+        Employee employee = repository.find(2);
+
+        assertThatEmployeeWithId(employee.getId())
+                .hasName("Pepe")
+                .doAssert();
+    }
+
+    @Test
+    @DisplayName("Don't found a employee")
+    public void don_t_found_a_employee() {
+        assertThrows(EmployeeDontFound.class, () -> {
+            repository.find(42);
+        });
     }
 }

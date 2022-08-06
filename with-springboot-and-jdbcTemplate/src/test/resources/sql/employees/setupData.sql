@@ -1,2 +1,2 @@
-INSERT INTO employees (id, name) VALUES (1, 'Manolo');
-INSERT INTO employees (id, name) VALUES (2, 'Pepe');
+INSERT INTO employees (id, name, status) VALUES (1, 'Manolo', 'working');
+INSERT INTO employees (id, name, status) VALUES (2, 'Pepe', 'working');

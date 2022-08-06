@@ -19,6 +19,6 @@ public class EmployeeRepository {
     }
 
     private RowMapper<Employee> getEmployeeRowMapper(){
-     return (rs, rowNum)-> new Employee(rs.getInt("id"), rs.getString("name"));
+        return (rs, rowNum) -> new Employee(rs.getInt("id"), rs.getString("name"), rs.getString("status"));
     }
 }

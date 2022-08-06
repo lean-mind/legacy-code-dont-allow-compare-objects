@@ -1,5 +1,7 @@
+DROP TABLE IF EXISTS employees;
 CREATE TABLE employees
 (
-    id   INT,
-    name VARCHAR(30) PRIMARY KEY
+    id     INT PRIMARY KEY,
+    name   VARCHAR(30),
+    status VARCHAR(10)
 );

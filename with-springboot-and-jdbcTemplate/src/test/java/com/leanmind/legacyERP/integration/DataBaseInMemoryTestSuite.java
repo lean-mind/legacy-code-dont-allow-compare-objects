@@ -1,5 +1,6 @@
 package com.leanmind.legacyERP.integration;
 
+import com.leanmind.legacyERP.integration.assertions.EmployeeAssertion;
 import org.junit.After;
 import org.junit.Before;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -75,5 +76,9 @@ public class DataBaseInMemoryTestSuite {
             }
         }
         return sb.toString();
+    }
+
+    protected EmployeeAssertion assertThatEmployeeWithId(int id) {
+        return new EmployeeAssertion(id, getDataSource());
     }
 }
