@@ -1,8 +1,13 @@
 package com.leanmind.legacyERP.privates.ratatoille;
 
+import com.leanmind.legacyERP.office.Employee;
+import com.leanmind.legacyERP.office.EmployeeDontFound;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.String.format;
 
@@ -19,7 +24,15 @@ public class RecipesRepository {
         TODO: We must move this JDBCTemplate to a wrapper in a package-module private ?
      */
 
-    public String find(String recipe) {
-        return jdbcTemplate.query(format("SELECT name FROM recipes WHERE name = '%s';", recipe),(rs, rw) -> rs.getString("name")).get(0);
+    public List<Recipe> findAll() {
+        return jdbcTemplate.query("SELECT * FROM recipes;", recipeRowMapper());
+    }
+
+    public Recipe find(String recipeName) {
+        return findAll().stream().filter(recipe -> recipe.getName().equals(recipeName)).findFirst().orElseThrow(() -> new RecipeDontFound(recipeName));
+    }
+
+    private RowMapper<Recipe> recipeRowMapper() {
+        return (rs, rw) -> new Recipe(rs.getString("id"), rs.getString("name"), new ArrayList<>());
     }
 }

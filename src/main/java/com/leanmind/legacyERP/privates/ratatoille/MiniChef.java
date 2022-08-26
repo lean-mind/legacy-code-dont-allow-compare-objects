@@ -14,11 +14,11 @@ public final class MiniChef {
     }
 
     public Ratatouille cookRatatouille() {
-        String recipe = recipesRepository.find("ratatouille");
-        if (!recipe.isEmpty()) {
-            List<Ingredient> ingredients = this.ingredientsRepository.retrieveIngredients();
-            return Ratatouille.withThis(ingredients);
+        Recipe recipe = recipesRepository.find("ratatouille");
+        if (recipe == null) {
+            throw new RuntimeException("Don't found the recipe to do the ratatouille");
         }
-        throw new RuntimeException("Don't found the recipe to do the ratatouille");
+        List<Ingredient> ingredients = this.ingredientsRepository.retrieveIngredientsFor(recipe.getId());
+        return Ratatouille.withThis(ingredients);
     }
 }
