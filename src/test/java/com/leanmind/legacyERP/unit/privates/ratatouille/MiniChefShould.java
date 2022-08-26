@@ -25,6 +25,6 @@ final class MiniChefShould {
         remy.cookRatatouille();
 
         verify(recipesRepository, times(1)).find("ratatouille");
-        verify(ingredientsRepository, times(1)).retrieveIngredientsFor(recipe.getId());
+        verify(ingredientsRepository, times(1)).retrieveIngredients();
     }
 }
