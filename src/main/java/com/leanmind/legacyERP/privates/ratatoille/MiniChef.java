@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP.privatesDepencencies;
+package com.leanmind.legacyERP.privates.ratatoille;
 
 import java.util.List;
 

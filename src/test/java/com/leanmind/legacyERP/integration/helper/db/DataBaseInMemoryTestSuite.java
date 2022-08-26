@@ -1,6 +1,5 @@
-package com.leanmind.legacyERP.integration;
+package com.leanmind.legacyERP.integration.helper.db;
 
-import com.leanmind.legacyERP.integration.assertions.EmployeeAssertion;
 import org.junit.After;
 import org.junit.Before;
 import org.springframework.boot.jdbc.DataSourceBuilder;

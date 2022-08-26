@@ -1,6 +1,6 @@
-package com.leanmind.legacyERP.integration.assertions;
+package com.leanmind.legacyERP.integration.helper.db;
 
-import com.leanmind.legacyERP.Employee;
+import com.leanmind.legacyERP.office.Employee;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -11,14 +11,14 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
-public class EmployeeAssertion {
+public final class EmployeeAssertion {
 
     private final int id;
 
     private JdbcTemplate jdbcTemplate;
 
     private final Map<String, String> fieldsValuesMap;
-    public EmployeeAssertion(int id, DataSource dataSource) {
+    EmployeeAssertion(int id, DataSource dataSource) {
         this.id = id;
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         fieldsValuesMap = new HashMap<>();

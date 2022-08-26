@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP;
+package com.leanmind.legacyERP.office;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

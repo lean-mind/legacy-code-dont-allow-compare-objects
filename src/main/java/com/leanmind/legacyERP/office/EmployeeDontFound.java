@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP;
+package com.leanmind.legacyERP.office;
 
 public class EmployeeDontFound extends RuntimeException {
 
