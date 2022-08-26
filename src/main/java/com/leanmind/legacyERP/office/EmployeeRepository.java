@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import javax.sql.DataSource;
 import java.util.List;
 
-public class EmployeeRepository {
+public final class EmployeeRepository {
 
     private final JdbcTemplate jdbcTemplate;
 

@@ -1,6 +1,6 @@
 package com.leanmind.legacyERP.office;
 
-public class Employee {
+public final class Employee {
     private final int id;
     private final String name;
     private final String status;
