@@ -2,12 +2,14 @@ package com.leanmind.legacyERP.integration.privates.ratatoille;
 
 import com.leanmind.legacyERP.integration.helper.db.DataBaseInMemoryTestSuite;
 import com.leanmind.legacyERP.privates.ratatoille.Recipe;
+import com.leanmind.legacyERP.privates.ratatoille.RecipeDontFound;
 import com.leanmind.legacyERP.privates.ratatoille.RecipesRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 final class RecipesRepositoryIT extends DataBaseInMemoryTestSuite {
 
@@ -31,6 +33,12 @@ final class RecipesRepositoryIT extends DataBaseInMemoryTestSuite {
 
         assertThat(recipe).isInstanceOf(Recipe.class);
         assertThat(recipe.getName()).isEqualTo("ratatouille");
+    }
+
+    @Test
+    @DisplayName("Recipe don't found")
+    public void recipe_don_t_found() {
+        assertThrows(RecipeDontFound.class, () -> repository.find("dontExistingRecipe"));
     }
 
 }

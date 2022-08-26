@@ -15,9 +15,6 @@ public final class MiniChef {
 
     public Ratatouille cookRatatouille() {
         Recipe recipe = recipesRepository.find("ratatouille");
-        if (recipe == null) {
-            throw new RuntimeException("Don't found the recipe to do the ratatouille");
-        }
         List<Ingredient> ingredients = this.ingredientsRepository.retrieveIngredients();
         return Ratatouille.withThis(ingredients);
     }
