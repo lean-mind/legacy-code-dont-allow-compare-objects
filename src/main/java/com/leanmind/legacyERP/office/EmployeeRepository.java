@@ -8,7 +8,7 @@ import java.util.List;
 
 public class EmployeeRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public EmployeeRepository(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
