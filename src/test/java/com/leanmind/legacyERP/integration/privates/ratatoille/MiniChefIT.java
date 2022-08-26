@@ -1,7 +1,7 @@
 package com.leanmind.legacyERP.integration.privates.ratatoille;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import com.leanmind.legacyERP.integration.helper.db.DataBaseInMemoryTestSuite;
 
-final class MiniChefIT {
-
+final class MiniChefIT extends DataBaseInMemoryTestSuite {
+    // TODO: Must be implemented
 }
