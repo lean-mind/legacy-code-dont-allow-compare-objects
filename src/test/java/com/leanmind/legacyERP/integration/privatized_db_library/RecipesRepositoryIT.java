@@ -1,9 +1,9 @@
-package com.leanmind.legacyERP.integration.privates.ratatoille;
+package com.leanmind.legacyERP.integration.privatized_db_library;
 
 import com.leanmind.legacyERP.integration.helper.db.DataBaseInMemoryTestSuite;
-import com.leanmind.legacyERP.privates.ratatoille.Recipe;
-import com.leanmind.legacyERP.privates.ratatoille.RecipeDontFound;
-import com.leanmind.legacyERP.privates.ratatoille.RecipesRepository;
+import com.leanmind.legacyERP.privatized_db_library.Recipe;
+import com.leanmind.legacyERP.privatized_db_library.RecipeDontFound;
+import com.leanmind.legacyERP.privatized_db_library.RecipesRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

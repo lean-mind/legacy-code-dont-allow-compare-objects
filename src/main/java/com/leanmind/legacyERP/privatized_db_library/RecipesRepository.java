@@ -1,7 +1,5 @@
-package com.leanmind.legacyERP.privates.ratatoille;
+package com.leanmind.legacyERP.privatized_db_library;
 
-import com.leanmind.legacyERP.office.Employee;
-import com.leanmind.legacyERP.office.EmployeeDontFound;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 

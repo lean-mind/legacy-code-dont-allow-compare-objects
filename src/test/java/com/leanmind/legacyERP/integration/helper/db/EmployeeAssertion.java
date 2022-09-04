@@ -1,6 +1,6 @@
 package com.leanmind.legacyERP.integration.helper.db;
 
-import com.leanmind.legacyERP.office.Employee;
+import com.leanmind.legacyERP.open_db_library.Employee;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;

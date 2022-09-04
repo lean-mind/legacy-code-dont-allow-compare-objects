@@ -1,9 +1,9 @@
-package com.leanmind.legacyERP.integration.office;
+package com.leanmind.legacyERP.integration.open_db_library;
 
 import com.leanmind.legacyERP.integration.helper.db.DataBaseInMemoryTestSuite;
-import com.leanmind.legacyERP.office.Employee;
-import com.leanmind.legacyERP.office.EmployeeDontFound;
-import com.leanmind.legacyERP.office.EmployeeRepository;
+import com.leanmind.legacyERP.open_db_library.Employee;
+import com.leanmind.legacyERP.open_db_library.EmployeeDontFound;
+import com.leanmind.legacyERP.open_db_library.EmployeeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

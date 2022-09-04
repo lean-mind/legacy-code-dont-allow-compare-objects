@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP.privates.ratatoille;
+package com.leanmind.legacyERP.privatized_db_library;
 
 public final class RecipeDontFound extends RuntimeException {
     public RecipeDontFound(String recipe)  {

@@ -1,9 +1,9 @@
-package com.leanmind.legacyERP.unit.privates.ratatouille;
+package com.leanmind.legacyERP.unit.privatized_db_library;
 
-import com.leanmind.legacyERP.privates.ratatoille.IngredientsRepository;
-import com.leanmind.legacyERP.privates.ratatoille.MiniChef;
-import com.leanmind.legacyERP.privates.ratatoille.Recipe;
-import com.leanmind.legacyERP.privates.ratatoille.RecipesRepository;
+import com.leanmind.legacyERP.privatized_db_library.IngredientsRepository;
+import com.leanmind.legacyERP.privatized_db_library.MiniChef;
+import com.leanmind.legacyERP.privatized_db_library.Recipe;
+import com.leanmind.legacyERP.privatized_db_library.RecipesRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
