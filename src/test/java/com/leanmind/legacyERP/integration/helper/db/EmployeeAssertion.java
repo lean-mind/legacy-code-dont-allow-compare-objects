@@ -1,6 +1,6 @@
 package com.leanmind.legacyERP.integration.helper.db;
 
-import com.leanmind.legacyERP.open_db_library.Employee;
+import com.leanmind.legacyERP.common.Employee;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -15,7 +15,7 @@ public final class EmployeeAssertion {
 
     private final int id;
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     private final Map<String, String> fieldsValuesMap;
     EmployeeAssertion(int id, DataSource dataSource) {

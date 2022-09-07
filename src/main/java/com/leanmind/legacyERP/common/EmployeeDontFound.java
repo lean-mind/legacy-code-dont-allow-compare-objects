@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP.open_db_library;
+package com.leanmind.legacyERP.common;
 
 public final class EmployeeDontFound extends RuntimeException {
 
