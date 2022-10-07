@@ -1,4 +1,4 @@
-package com.leanmind.legacyERP.common;
+package com.leanmind.legacyERP.open_db_library;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package com.leanmind.legacyERP.privatized_db_library;
 
-import com.leanmind.legacyERP.common.Employee;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -19,7 +19,7 @@ public class PrivateDbConnection {
     }
 
     private RowMapper<Employee> getEmployeeRowMapper() {
-        return (rs, rowNum) -> new TrickedEmployee(
+        return (rs, rowNum) -> new Employee(
             rs.getInt("id"),
             rs.getString("name"),
             rs.getString("status")

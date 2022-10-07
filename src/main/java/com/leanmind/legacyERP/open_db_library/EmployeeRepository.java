@@ -1,6 +1,5 @@
 package com.leanmind.legacyERP.open_db_library;
 
-import com.leanmind.legacyERP.common.Employee;
 import com.leanmind.legacyERP.common.EmployeeDontFound;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

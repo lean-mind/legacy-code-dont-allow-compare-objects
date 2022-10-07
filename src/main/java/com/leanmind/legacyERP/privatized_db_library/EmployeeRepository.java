@@ -1,6 +1,5 @@
 package com.leanmind.legacyERP.privatized_db_library;
 
-import com.leanmind.legacyERP.common.Employee;
 import com.leanmind.legacyERP.common.EmployeeDontFound;
 
 import java.util.List;
